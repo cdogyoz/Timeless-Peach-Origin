@@ -4,15 +4,17 @@ using Console = SadConsole.Console;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Timeless_Peach_Origin.src.consoles;
+using Timeless_Peach_Origin.src.constructs;
 
 namespace Timeless_Peach_Origin.src.consoles {
     class CharacterCreate : SadConsole.Console {
 
         private int selectChoice = 0;
+        private GameConsole game;
         static public string currentRace = "You choose Human.";
 
-        public CharacterCreate(int width, int height) : base(TimelessPeach.width, TimelessPeach.height) {
-
+        public CharacterCreate(int width, int height, GameConsole game) : base(TimelessPeach.width, TimelessPeach.height) {
+            this.game = game;
         }
 
         public override void Update(TimeSpan timeElapsed) {
@@ -105,6 +107,8 @@ namespace Timeless_Peach_Origin.src.consoles {
 
             if (SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.Space) || SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.Enter)) {
                 if (selectChoice == 0) {
+
+                    game.SetPlayer(new HumanConstruct());
                     //name = EnterName();
                 }
                 if (selectChoice == 1) {

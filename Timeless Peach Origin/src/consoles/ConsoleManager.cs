@@ -44,11 +44,7 @@ namespace Timeless_Peach_Origin.src.consoles {
                     SadConsole.Global.CurrentScreen = game;
                 }
             }
-            if (gameState == GameState.CHARACTER_CREATE) {
-                characterCreate = new CharacterCreate(TimelessPeach.width, TimelessPeach.height);
-                Children.Add(characterCreate);
-                SadConsole.Global.CurrentScreen = characterCreate;
-            }
+
         }
 
     }

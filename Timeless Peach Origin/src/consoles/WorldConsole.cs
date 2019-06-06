@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Timeless_Peach_Origin.src.consoles {
-    enum GameState {
-        MAIN_MENU, PLAYING
+    class WorldConsole {
     }
 }
