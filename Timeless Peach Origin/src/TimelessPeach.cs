@@ -9,12 +9,12 @@ namespace Timeless_Peach_Origin {
 
     class TimelessPeach {
 
-        public const int Width = 120;
-        public const int Height = 43;
+        public const int width = 120;
+        public const int height = 43;
 
         static void Main(string[] args) {
             // Setup the engine and create the main window.
-            SadConsole.Game.Create(Width, Height);
+            SadConsole.Game.Create(width, height);
 
             // Hook the start event so we can add consoles to the system.
             SadConsole.Game.OnInitialize = Init;
@@ -33,7 +33,7 @@ namespace Timeless_Peach_Origin {
         private static void Init() {
 
             // Begins the game 
-            ContainerConsole game = new ConsoleManager();
+            ConsoleManager game = new ConsoleManager(width, height);
 
         }
     }

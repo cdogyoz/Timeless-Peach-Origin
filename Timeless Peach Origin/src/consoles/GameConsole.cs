@@ -5,6 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Timeless_Peach_Origin.src.consoles {
-    class GameConsole {
+    class GameConsole : SadConsole.ContainerConsole{
+
+        public GameConsole() {
+
+        }
+
     }
 }
