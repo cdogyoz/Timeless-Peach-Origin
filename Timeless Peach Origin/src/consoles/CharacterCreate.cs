@@ -6,13 +6,12 @@ using Microsoft.Xna.Framework.Graphics;
 using Timeless_Peach_Origin.src.consoles;
 
 namespace Timeless_Peach_Origin.src.consoles {
-    class CharacterCreate : SadConsole.ContainerConsole {
+    class CharacterCreate : SadConsole.Console {
 
-        private ConsoleManager conMan;
         private int selectChoice = 0;
         static public string currentRace = "You choose Human.";
 
-        public CharacterCreate(int width, int height) {
+        public CharacterCreate(int width, int height) : base(TimelessPeach.width, TimelessPeach.height) {
 
         }
 
