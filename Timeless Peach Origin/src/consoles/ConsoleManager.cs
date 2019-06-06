@@ -13,6 +13,7 @@ namespace Timeless_Peach_Origin.src.consoles {
 
         public static MainMenuConsole mainMenu;
         public static GameConsole game;
+        public static CharacterCreate characterCreate;
 
         private int gameWidth, gameHeight;
         private GameState gameState = new GameState();
@@ -42,6 +43,11 @@ namespace Timeless_Peach_Origin.src.consoles {
                     Children.Add(game);
                     SadConsole.Global.CurrentScreen = game;
                 }
+            }
+            if (gameState == GameState.CHARACTER_CREATE) {
+                characterCreate = new CharacterCreate(TimelessPeach.width, TimelessPeach.height);
+                Children.Add(characterCreate);
+                SadConsole.Global.CurrentScreen = characterCreate;
             }
         }
 

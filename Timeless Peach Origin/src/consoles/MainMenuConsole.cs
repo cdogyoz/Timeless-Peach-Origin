@@ -45,7 +45,7 @@ namespace Timeless_Peach_Origin.src.consoles {
 
             if (SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.Space) || SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.Enter)) {
                 if (selectChoice == 0) {
-                    conMan.ChangeState(GameState.PLAYING);
+                    conMan.ChangeState(GameState.CHARACTER_CREATE);
                 } else if (selectChoice == 1) {
                     System.Environment.Exit(1);
                 }
