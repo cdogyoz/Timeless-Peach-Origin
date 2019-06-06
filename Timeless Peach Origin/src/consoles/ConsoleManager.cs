@@ -21,7 +21,7 @@ namespace Timeless_Peach_Origin.src.consoles {
             mainMenu = new MainMenuConsole(gameWidth, gameHeight, this);
             gameState = GameState.MAIN_MENU;
             Children.Add(mainMenu);
-            SadConsole.Global.CurrentScreen = this;
+            SadConsole.Global.CurrentScreen = mainMenu;
         }
 
         public override void Update(TimeSpan timeElapsed) {
@@ -32,13 +32,17 @@ namespace Timeless_Peach_Origin.src.consoles {
             this.gameState = gameState;
 
             if (gameState == GameState.MAIN_MENU) {
-                Children.Remove(SadConsole.Global.CurrentScreen);
                 SadConsole.Global.CurrentScreen = mainMenu;
-            } else if(gameState == GameState.PLAYING) {
-                Children.Remove(SadConsole.Global.CurrentScreen);
-                SadConsole.Global.CurrentScreen = game;
             }
 
+            if (gameState == GameState.PLAYING) {
+
+                if(SadConsole.Global.CurrentScreen == mainMenu) {
+                    game = new GameConsole(gameWidth, gameHeight);
+                    Children.Add(game);
+                    SadConsole.Global.CurrentScreen = game;
+                }
+            }
         }
 
     }
