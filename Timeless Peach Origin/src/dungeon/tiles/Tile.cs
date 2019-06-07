@@ -6,6 +6,7 @@ namespace Timeless_Peach_Origin.src.dungeon {
     class Tile : Cell{
 
         private string name;
+        protected bool solid;
 
         public Tile(Color foreground, Color background, int glyph, string name) {
             Foreground = foreground;

@@ -32,7 +32,12 @@ namespace Timeless_Peach_Origin.src.dungeon {
         private void CreateLevel() {
             if(levelType == LevelTypes.CAVERNS) {
                 CavernChef cavern = new CavernChef(base.Width, base.Height, this);
+                level = cavern.CreateLevel();
             }
+        }
+
+        public Cell[] GetLevel() {
+            return level;
         }
 
         public T GetEntityAt<T>(Point position) where T : Construct {

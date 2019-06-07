@@ -111,7 +111,9 @@
     <Compile Include="src\dungeon\Dungeon.cs" />
     <Compile Include="src\dungeon\Level.cs" />
     <Compile Include="src\dungeon\LevelTypes.cs" />
-    <Compile Include="src\dungeon\Tile.cs" />
+    <Compile Include="src\dungeon\tiles\CaveWallTile.cs" />
+    <Compile Include="src\dungeon\tiles\FloorTile.cs" />
+    <Compile Include="src\dungeon\tiles\Tile.cs" />
     <Compile Include="src\TimelessPeach.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

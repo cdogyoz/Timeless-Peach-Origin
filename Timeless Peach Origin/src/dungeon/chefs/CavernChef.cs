@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Timeless_Peach_Origin.src.dungeon.tiles;
 using GoRogue;
 using GoRogue.MapGeneration;
 using GoRogue.MapViews;
@@ -17,25 +18,28 @@ namespace Timeless_Peach_Origin.src.dungeon.chefs {
         public CavernChef(int width, int height, Level level) {
             this.width = width;
             this.height = height;
+            cavern = new ArrayMap<Tile>(width, height);
         }
 
         public Tile[] CreateLevel() {
 
-            Random r = new Random();
+            Random r = new Random(seed);
 
             for (int x = 0; x < width; x++) {
                 for (int y = 0; y < height; y++) {
                     int randNum = r.Next(0, 125);
 
                     if (randNum <= 33) {
-                       // cavern[x, y] = new Tile(Color.White, Color.Black, (int)'#', true, "wall"); //Create classes for these
+                        Tile tile = new CaveWallTile();
+                        cavern[x, y] = tile; //Create classes for these
                     } else {
-                       // cavern[x, y] = new Tile(Color.White, Color.Black, (int)'-', false, "ground");
+                        Tile tile = new FloorTile();
+                        cavern[x, y] = tile;
                     }
                 }
             }
 
-            return new Tile[3];
+            return cavern;
 
         }
 
