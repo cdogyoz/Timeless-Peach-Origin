@@ -9,8 +9,8 @@ namespace Timeless_Peach_Origin {
 
     class TimelessPeach {
 
-        public const int width = 120;
-        public const int height = 43;
+        public const int width = 130;
+        public const int height = 40;
 
         static void Main(string[] args) {
             // Setup the engine and create the main window.
