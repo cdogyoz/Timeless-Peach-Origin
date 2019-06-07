@@ -41,5 +41,9 @@ namespace Timeless_Peach_Origin.src.consoles {
                 this.Children.Add(construct);
             }
         }
+
+        public int GetCurrentLevel() {
+            return curLevel;
+        }
     }
 }
