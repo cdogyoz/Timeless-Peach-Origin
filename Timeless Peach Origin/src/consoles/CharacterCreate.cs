@@ -7,18 +7,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Timeless_Peach_Origin.src.consoles;
 using Timeless_Peach_Origin.src.constructs;
 
-/*private string EnterName() {
-            ControlsConsole nameConsole = new ControlsConsole(40, 3);
-            nameConsole.Position = new Point(15, 18);
-            this.Children.Add(nameConsole);
-            TextBox nameIn = new TextBox(40);
-            nameIn.IsEnabled = true;
-            nameIn.IsVisible = true;
-            nameConsole.Add(nameIn);
-            nameIn.ProcessKeyboard(new SadConsole.Input.Keyboard());
-            return "string";
-        }*/
-
 namespace Timeless_Peach_Origin.src.consoles {
     class CharacterCreate : SadConsole.Console {
 
