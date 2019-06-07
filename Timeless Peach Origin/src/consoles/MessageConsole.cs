@@ -6,10 +6,16 @@ namespace Timeless_Peach_Origin.src.consoles {
     class MessageConsole : ScrollingConsole {
 
         public MessageConsole() : base(100, 12) {
+            int border = 0;
             Position = new Point(0, 31);
-            Fill(Color.Coral, Color.Coral, (int)' ', null);
-            Print(34, 0, "MESSAGE CONSOLE", Color.White, Color.Black);
-            Print(0, 1, "Welcome to Timeless Peach!", Color.Green, Color.Blue);
+            Fill(Color.PeachPuff, Color.Black, (int)' ', null);
+            //Keep spaces before and after strings for aesthetics
+            Print(34, 1, " MESSAGE CONSOLE ", Color.PeachPuff);
+            Print(0, 2, " Welcome to Timeless Peach! ", Color.PeachPuff);
+            while (border < 100) {
+                Print(border, 0, "-", Color.DarkCyan, Color.Black);
+                border++;
+            }
         }
 
     }

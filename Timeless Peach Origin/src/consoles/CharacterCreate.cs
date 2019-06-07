@@ -1,10 +1,23 @@
 ﻿using System;
 using SadConsole;
+using SadConsole.Controls;
 using Console = SadConsole.Console;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Timeless_Peach_Origin.src.consoles;
 using Timeless_Peach_Origin.src.constructs;
+
+/*private string EnterName() {
+            ControlsConsole nameConsole = new ControlsConsole(40, 3);
+            nameConsole.Position = new Point(15, 18);
+            this.Children.Add(nameConsole);
+            TextBox nameIn = new TextBox(40);
+            nameIn.IsEnabled = true;
+            nameIn.IsVisible = true;
+            nameConsole.Add(nameIn);
+            nameIn.ProcessKeyboard(new SadConsole.Input.Keyboard());
+            return "string";
+        }*/
 
 namespace Timeless_Peach_Origin.src.consoles {
     class CharacterCreate : SadConsole.Console {
@@ -25,8 +38,10 @@ namespace Timeless_Peach_Origin.src.consoles {
         }
 
         private void DrawMenuOptions() {
-            Print(0, 1, "CHARACTER CREATE".Align(HorizontalAlignment.Center, TimelessPeach.width), Color.White, Color.Black);
-            Print(0, 22, "Press space or enter to play".Align(HorizontalAlignment.Center, TimelessPeach.width), Color.Black, Color.PeachPuff);
+            Print(0, 0, " ".Align(HorizontalAlignment.Center, TimelessPeach.width), Color.Black, Color.PeachPuff);
+            Print(0, 2, " ".Align(HorizontalAlignment.Center, TimelessPeach.width), Color.Black, Color.PeachPuff);
+            Print(0, 1, "CHARACTER CREATE".Align(HorizontalAlignment.Center, TimelessPeach.width), Color.Black, Color.PeachPuff);
+            Print(0, 30, "Press space or enter to play".Align(HorizontalAlignment.Center, TimelessPeach.width), Color.Black, Color.PeachPuff);
             if (selectChoice == 0) {
                 Print(0, 8, "Human".Align(HorizontalAlignment.Center, TimelessPeach.width), Color.Red);
                 Print(0, 10, "Kimi".Align(HorizontalAlignment.Center, TimelessPeach.width), Color.White);
@@ -107,20 +122,18 @@ namespace Timeless_Peach_Origin.src.consoles {
 
             if (SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.Space) || SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.Enter)) {
                 if (selectChoice == 0) {
-
                     game.SetPlayer(new HumanConstruct());
-                    //name = EnterName();
                 }
                 if (selectChoice == 1) {
-                    //name = EnterName();
+                    game.SetPlayer(new KimiConstruct());
                     selectChoice = 0;
                 }
                 if (selectChoice == 2) {
-                    //name = EnterName();
+                    game.SetPlayer(new HighUveseConstruct());
                     selectChoice = 0;
                 }
                 if (selectChoice == 3) {
-                    //name = EnterName();
+                    game.SetPlayer(new BronkConstruct());
                     selectChoice = 0;
                 }
             }
