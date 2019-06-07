@@ -15,5 +15,9 @@ namespace Timeless_Peach_Origin.src.dungeon {
             this.name = name;
         }
 
+        public string GetName() {
+            return name;
+        }
+
     }
 }
