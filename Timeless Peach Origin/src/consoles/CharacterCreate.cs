@@ -117,7 +117,8 @@ namespace Timeless_Peach_Origin.src.consoles {
                     selectChoice = 0;
                 }
                 if (selectChoice == 2) {
-                    game.SetPlayer(new HighUveseConstruct());
+                    PlayableConstruct player = new HighUveseConstruct();
+                    game.SetPlayer(player);
                     selectChoice = 0;
                 }
                 if (selectChoice == 3) {
