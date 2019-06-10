@@ -9,6 +9,8 @@ namespace Timeless_Peach_Origin.src.consoles {
 
         private int curLevel = 0;
         private PlayableConstruct player;
+        private int xPos = 10;
+        private int yPos = 10;
 
         Dungeon dungeon;
         
@@ -29,6 +31,7 @@ namespace Timeless_Peach_Origin.src.consoles {
 
         public override void Update(TimeSpan timeElapsed) {
             SyncMapEntities();
+            PlayerMovement();
             base.Update(timeElapsed);
         }
 
@@ -44,6 +47,40 @@ namespace Timeless_Peach_Origin.src.consoles {
 
         public int GetCurrentLevel() {
             return curLevel;
+        }
+
+        private void PlayerMovement() {
+            if (SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.Down)
+                || (SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.NumPad2))) {
+                if (GetGlyph(xPos, yPos + 1) != '#') {
+                    yPos++;
+                    player.Position = new Point(xPos, yPos);
+                }
+            }
+
+            if (SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.Up)
+                || (SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.NumPad8))) {
+                if (GetGlyph(xPos, yPos - 1) != '#') {
+                    yPos--;
+                    player.Position = new Point(xPos, yPos);
+                }
+            }
+
+            if (SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.Left)
+                || (SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.NumPad4))) {
+                if (GetGlyph(xPos - 1, yPos) != '#') {
+                    xPos--;
+                    player.Position = new Point(xPos, yPos);
+                }
+            }
+
+            if (SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.Right)
+                || (SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.NumPad6))) {
+                if (GetGlyph(xPos + 1, yPos) != '#') {
+                    xPos++;
+                    player.Position = new Point(xPos, yPos);
+                }
+            }
         }
     }
 }
