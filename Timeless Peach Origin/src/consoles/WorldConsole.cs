@@ -22,12 +22,13 @@ namespace Timeless_Peach_Origin.src.consoles {
         }
 
         public void CenterOnPlayer(){
-            //this.CenterViewPortOnPoint()
+            this.CenterViewPortOnPoint(player.Position);
         }
 
         public override void Update(TimeSpan timeElapsed) {
             SyncMapEntities();
             PlayerMovement();
+            CenterOnPlayer();
             base.Update(timeElapsed);
         }
 

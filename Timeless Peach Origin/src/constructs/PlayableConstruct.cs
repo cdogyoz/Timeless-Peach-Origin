@@ -1,5 +1,6 @@
 ﻿using System;
 using SadConsole;
+using SadConsole.Components;
 using Microsoft.Xna.Framework;
 
 
@@ -11,6 +12,7 @@ namespace Timeless_Peach_Origin.src.constructs {
         public PlayableConstruct(Color foreground, Color background, int glyph, string name) : base(foreground, background, glyph, name) {
             IsVisible = true;
             Position = new Point(xPos, yPos);
+            this.Components.Add(new EntityViewSyncComponent());
         }
     }
 }
