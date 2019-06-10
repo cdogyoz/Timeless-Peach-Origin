@@ -37,7 +37,7 @@ namespace Timeless_Peach_Origin.src.consoles {
         }
 
         private void CreateGameConsoles() {
-            charConsole = new CharacterConsole(this);
+            charConsole = new CharacterConsole(this, player);
             messageConsole = new MessageConsole();
             worldConsole = new WorldConsole(player);
             Children.Add(worldConsole);

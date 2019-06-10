@@ -21,6 +21,14 @@ namespace Timeless_Peach_Origin.src.constructs {
             return strength * 4;
         }
 
+        public int getMana() {
+            return divinity * 4;
+        }
+
+        public int getStrength() {
+            return strength;
+        }
+
         public int getAgility() {
             return agility;
         }
