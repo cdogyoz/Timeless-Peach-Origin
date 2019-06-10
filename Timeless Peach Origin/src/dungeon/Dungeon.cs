@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 namespace Timeless_Peach_Origin.src.dungeon {
     class Dungeon {
-
         public List<Level> dungeon;
 
         //Create a new dungeon

@@ -31,7 +31,6 @@ namespace Timeless_Peach_Origin {
         }
 
         private static void Init() {
-
             // Begins the game 
             ConsoleManager game = new ConsoleManager(width, height);
 

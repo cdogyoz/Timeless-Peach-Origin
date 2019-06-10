@@ -6,7 +6,6 @@ using Timeless_Peach_Origin.src.constructs;
 
 namespace Timeless_Peach_Origin.src.consoles {
     class CharacterConsole : SadConsole.Console{
-
         private GameConsole gameConsole;
         private PlayableConstruct player;
 

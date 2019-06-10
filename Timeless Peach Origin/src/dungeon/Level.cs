@@ -59,7 +59,5 @@ namespace Timeless_Peach_Origin.src.dungeon {
         private void OnEntityMoved(object sender, Entity.EntityMovedEventArgs args) {
             entities.Move(args.Entity as Construct, args.Entity.Position);
         }
-
-
     }
 }

@@ -17,6 +17,5 @@ namespace Timeless_Peach_Origin.src.consoles {
                 border++;
             }
         }
-
     }
 }

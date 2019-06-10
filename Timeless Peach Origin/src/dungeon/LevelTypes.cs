@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace Timeless_Peach_Origin.src.dungeon {
     enum LevelTypes {
-
         CAVERNS
-
     }
 }

@@ -5,7 +5,6 @@ using Timeless_Peach_Origin.src.constructs;
 
 namespace Timeless_Peach_Origin.src.consoles {
     class GameConsole : SadConsole.ContainerConsole{
-
         private CharacterCreate charCreate;
         private PlayableConstruct player;
 
@@ -14,19 +13,14 @@ namespace Timeless_Peach_Origin.src.consoles {
         private WorldConsole worldConsole;
         private MessageConsole messageConsole;
 
-
         public GameConsole(int width, int height) {
-
             CreateCharacter();
-
         }
 
         public override void Update(TimeSpan timeElapsed) {
-            
             if(player != null) {
                 //Once the character has been made then we can start logic
             }
-
             base.Update(timeElapsed);
         }
 
@@ -57,6 +51,5 @@ namespace Timeless_Peach_Origin.src.consoles {
             Children.Add(player);
             CreateGameConsoles();
         }
-
     }
 }

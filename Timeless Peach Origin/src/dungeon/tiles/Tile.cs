@@ -4,7 +4,6 @@ using Microsoft.Xna.Framework;
 
 namespace Timeless_Peach_Origin.src.dungeon {
     class Tile : Cell{
-
         private string name;
         protected bool solid;
 
@@ -18,6 +17,5 @@ namespace Timeless_Peach_Origin.src.dungeon {
         public string GetName() {
             return name;
         }
-
     }
 }

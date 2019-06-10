@@ -14,6 +14,5 @@ namespace Timeless_Peach_Origin.src.constructs {
             base.divinity = 7;
             base.stamina = 100;
         }
-
     }
 }

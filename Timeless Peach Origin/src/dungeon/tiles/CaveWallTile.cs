@@ -8,6 +8,5 @@ namespace Timeless_Peach_Origin.src.dungeon.tiles {
         public CaveWallTile() : base(Color.SaddleBrown, Color.Black, (int)'#', "cave_wall") {
             solid = true;
         }
-
     }
 }

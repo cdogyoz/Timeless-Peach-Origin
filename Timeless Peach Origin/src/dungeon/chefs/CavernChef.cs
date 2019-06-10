@@ -24,7 +24,6 @@ namespace Timeless_Peach_Origin.src.dungeon.chefs {
         }
 
         public Tile[] CreateLevel() {
-
             Random r = new Random(seed);
 
             for (int x = 0; x < width; x++) {
@@ -114,8 +113,6 @@ namespace Timeless_Peach_Origin.src.dungeon.chefs {
             }
 
             return cavern;
-
         }
-
     }
 }

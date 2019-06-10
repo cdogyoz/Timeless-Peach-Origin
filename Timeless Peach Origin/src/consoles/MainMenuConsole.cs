@@ -4,7 +4,6 @@ using Microsoft.Xna.Framework;
 
 namespace Timeless_Peach_Origin.src.consoles {
     class MainMenuConsole : SadConsole.Console {
-
         private const string title = "Timeless Peach: Origin";
         private int selectChoice = 0;
         private ConsoleManager conMan;

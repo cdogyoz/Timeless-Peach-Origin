@@ -9,7 +9,6 @@ using Timeless_Peach_Origin.src.constructs;
 
 namespace Timeless_Peach_Origin.src.consoles {
     class CharacterCreate : SadConsole.Console {
-
         private int selectChoice = 0;
         private GameConsole game;
 

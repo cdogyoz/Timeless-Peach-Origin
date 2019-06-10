@@ -8,7 +8,6 @@ using Timeless_Peach_Origin.src.consoles;
 namespace Timeless_Peach_Origin.src.consoles {
 
     //Stores all of the info about consoles and controls the game state
-
     class ConsoleManager : ContainerConsole {
 
         public static MainMenuConsole mainMenu;
@@ -44,8 +43,6 @@ namespace Timeless_Peach_Origin.src.consoles {
                     SadConsole.Global.CurrentScreen = game;
                 }
             }
-
         }
-
     }
 }
