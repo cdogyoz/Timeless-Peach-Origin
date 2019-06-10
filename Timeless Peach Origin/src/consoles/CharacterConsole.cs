@@ -23,6 +23,5 @@ namespace Timeless_Peach_Origin.src.consoles {
             Print(1, 2, "Dungeon Level: " + gameConsole.GetWorldConsole().GetCurrentLevel() + 1);
             base.Update(timeElapsed);
         }
-
     }
 }
