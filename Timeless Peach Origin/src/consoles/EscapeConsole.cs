@@ -12,7 +12,7 @@ namespace Timeless_Peach_Origin.src.consoles {
         private int selectChoice = 0;
         private GameConsole game;
 
-        public EConsole(int width, int height, GameConsole game) : base(TimelessPeach.width, TimelessPeach.height) {
+        public EscapeConsole(int width, int height, GameConsole game) : base(TimelessPeach.width, TimelessPeach.height) {
             this.game = game;
         }
 
