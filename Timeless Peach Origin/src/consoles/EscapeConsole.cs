@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using SadConsole;
 using SadConsole.Controls;
 using Console = SadConsole.Console;
