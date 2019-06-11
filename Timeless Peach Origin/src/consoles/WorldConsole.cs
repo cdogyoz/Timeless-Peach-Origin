@@ -8,6 +8,7 @@ namespace Timeless_Peach_Origin.src.consoles {
     class WorldConsole : SadConsole.ScrollingConsole {
         private int curLevel = 0;
         private PlayableConstruct player;
+        private EscConsole escConsole;
         private int xPos = 10;
         private int yPos = 10;
         Dungeon dungeon;
@@ -46,6 +47,12 @@ namespace Timeless_Peach_Origin.src.consoles {
         }
 
         private void PlayerMovement() {
+            if (SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.Escape)) {
+                escConsole = new EscConsole(TimelessPeach.width, TimelessPeach.height);
+                Children.Add(escConsole);
+                SadConsole.Global.CurrentScreen = escConsole;
+            }
+
             if (SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.Down)
                 || (SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.NumPad2))) {
                 if (GetGlyph(xPos, yPos + 1) != '#') {

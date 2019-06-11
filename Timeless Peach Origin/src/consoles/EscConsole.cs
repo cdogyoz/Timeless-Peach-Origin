@@ -11,9 +11,10 @@ namespace Timeless_Peach_Origin.src.consoles {
     class EscConsole : SadConsole.Console {
         private int selectChoice = 0;
         private GameConsole game;
+        private MainMenuConsole mainMenuConsole;
 
-        public EscConsole(int width, int height, GameConsole game) : base(TimelessPeach.width, TimelessPeach.height) {
-            this.game = game;
+        public EscConsole(int width, int height) : base(TimelessPeach.width, TimelessPeach.height) {
+
         }
 
         public override void Update(TimeSpan timeElapsed) {
@@ -60,6 +61,8 @@ namespace Timeless_Peach_Origin.src.consoles {
                 if (selectChoice == 0) {
                 }
                 if (selectChoice == 1) {
+                    SadConsole.Global.CurrentScreen = mainMenuConsole;
+                    Children.Add(mainMenuConsole);
                 }
             }
         }
