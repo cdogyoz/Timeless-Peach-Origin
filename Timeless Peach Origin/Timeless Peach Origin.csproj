@@ -95,6 +95,7 @@
   <ItemGroup>
     <Compile Include="src\consoles\CharacterConsole.cs" />
     <Compile Include="src\consoles\CharacterCreate.cs" />
+    <Compile Include="src\consoles\EscConsole.cs" />
     <Compile Include="src\consoles\ConsoleManager.cs" />
     <Compile Include="src\consoles\GameConsole.cs" />
     <Compile Include="src\consoles\GameState.cs" />
