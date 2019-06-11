@@ -8,11 +8,11 @@ using Timeless_Peach_Origin.src.consoles;
 using Timeless_Peach_Origin.src.constructs;
 
 namespace Timeless_Peach_Origin.src.consoles {
-    class CharacterCreate : SadConsole.Console {
+    class EscapeConsole : SadConsole.Console {
         private int selectChoice = 0;
         private GameConsole game;
 
-        public EscapeOptions(int width, int height, GameConsole game) : base(TimelessPeach.width, TimelessPeach.height) {
+        public EscapeConsole(int width, int height, GameConsole game) : base(TimelessPeach.width, TimelessPeach.height) {
             this.game = game;
         }
 

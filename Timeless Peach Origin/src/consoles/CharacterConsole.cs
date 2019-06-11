@@ -23,15 +23,15 @@ namespace Timeless_Peach_Origin.src.consoles {
         }
 
         public override void Update(TimeSpan timeElapsed) {
-            Print(1, 2, "Dungeon Level: " + gameConsole.GetWorldConsole().GetCurrentLevel() + 1);
-            Print(1, 3, "-----------------------------", Color.DarkCyan);
-            Print(1, 4, "Health: " + player.getHealth());
-            Print(1, 5, "Mana: " + player.getMana());
-            Print(1, 7, "Strength: " + player.getStrength());
-            Print(1, 8, "Intelligence: " + player.getIntelligence());
-            Print(1, 9, "Agility: " + player.getAgility());
-            Print(1, 10, "Divinity: " + player.getDivinity());
-            Print(1, 11, "Stamina: " + player.getStamina());
+            Print(2, 2, "Dungeon Level: " + gameConsole.GetWorldConsole().GetCurrentLevel() + 1);
+            Print(2, 3, "-----------------------------", Color.DarkCyan);
+            Print(2, 4, "Health: " + player.getHealth());
+            Print(2, 5, "Mana: " + player.getMana());
+            Print(2, 7, "Strength: " + player.getStrength());
+            Print(2, 8, "Intelligence: " + player.getIntelligence());
+            Print(2, 9, "Agility: " + player.getAgility());
+            Print(2, 10, "Divinity: " + player.getDivinity());
+            Print(2, 11, "Stamina: " + player.getStamina());
             base.Update(timeElapsed);
         }
     }
