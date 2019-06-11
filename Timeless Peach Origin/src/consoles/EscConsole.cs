@@ -13,9 +13,10 @@ namespace Timeless_Peach_Origin.src.consoles {
         private GameConsole game;
         private MainMenuConsole mainMenuConsole;
         private ConsoleManager conMan;
-        private GameState gameState = new GameState();
-        public EscConsole(int width, int height) : base(TimelessPeach.width, TimelessPeach.height) {
 
+        private GameState gameState = new GameState();
+        public EscConsole(int width, int height, GameConsole game) : base(TimelessPeach.width, TimelessPeach.height) {
+            this.game = game ;
         }
 
         public override void Update(TimeSpan timeElapsed) {
@@ -60,7 +61,7 @@ namespace Timeless_Peach_Origin.src.consoles {
 
             if (SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.Space) || SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.Enter)) {
                 if (selectChoice == 0) {
-                    //figure it out pussy 
+                    SadConsole.Global.CurrentScreen = game;
                 }
                 if (selectChoice == 1) {
                     conMan = new ConsoleManager(TimelessPeach.width, TimelessPeach.height);

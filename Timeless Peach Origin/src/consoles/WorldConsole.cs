@@ -11,11 +11,13 @@ namespace Timeless_Peach_Origin.src.consoles {
         private EscConsole escConsole;
         private int xPos = 10;
         private int yPos = 10;
+        private GameConsole game;
         Dungeon dungeon;
 
-        public WorldConsole(PlayableConstruct player) : base(110, 32, new Rectangle(0,0, 100, 100)) {
+        public WorldConsole(PlayableConstruct player, GameConsole game) : base(110, 32, new Rectangle(0,0, 100, 100)) {
             Position = new Point(0, 0);
             this.player = player;
+            this.game = game;
             dungeon = new Dungeon();
             Cell[] level = dungeon.dungeon[curLevel].GetLevel();
             SetSurface(level, dungeon.dungeon[curLevel].Width, dungeon.dungeon[curLevel].Height);
@@ -48,7 +50,7 @@ namespace Timeless_Peach_Origin.src.consoles {
 
         private void PlayerMovement() {
             if (SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.Escape)) {
-                escConsole = new EscConsole(TimelessPeach.width, TimelessPeach.height);
+                escConsole = new EscConsole(TimelessPeach.width, TimelessPeach.height, game);
                 Children.Add(escConsole);
                 SadConsole.Global.CurrentScreen = escConsole;
             }
