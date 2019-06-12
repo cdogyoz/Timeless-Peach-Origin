@@ -103,6 +103,7 @@
     <Compile Include="src\consoles\MessageConsole.cs" />
     <Compile Include="src\consoles\WorldConsole.cs" />
     <Compile Include="src\constructs\BronkConstruct.cs" />
+    <Compile Include="src\constructs\Item.cs" />
     <Compile Include="src\constructs\Construct.cs" />
     <Compile Include="src\constructs\HighUveseConstruct.cs" />
     <Compile Include="src\constructs\HumanConstruct.cs" />

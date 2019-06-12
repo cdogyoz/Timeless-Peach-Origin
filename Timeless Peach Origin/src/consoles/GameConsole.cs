@@ -2,6 +2,7 @@
 using SadConsole;
 using Microsoft.Xna.Framework;
 using Timeless_Peach_Origin.src.constructs;
+using System.Collections.Generic;
 
 namespace Timeless_Peach_Origin.src.consoles {
     class GameConsole : SadConsole.ContainerConsole{
@@ -12,6 +13,11 @@ namespace Timeless_Peach_Origin.src.consoles {
         private CharacterConsole charConsole;
         private WorldConsole worldConsole;
         private MessageConsole messageConsole;
+
+        public static List<Item> inventory = new List<Item>() {
+            new Item(Color.Purple, Color.Black, '&', "Broadsword"){ },
+            new Item(Color.Purple, Color.Black, '&', "Shortsword"){ }
+        };
 
         public GameConsole(int width, int height) {
             CreateCharacter();

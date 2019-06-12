@@ -32,6 +32,15 @@ namespace Timeless_Peach_Origin.src.consoles {
             Print(2, 9, "Agility: " + player.getAgility());
             Print(2, 10, "Divinity: " + player.getDivinity());
             Print(2, 11, "Stamina: " + player.getStamina());
+
+            //Inventory display
+            Print(2, 26, "Inventory");
+            int index = 28;
+            foreach (Item x in GameConsole.inventory) {
+                Print(2, index, x.name);
+                index++;
+            }
+
             base.Update(timeElapsed);
         }
     }
