@@ -1,5 +1,6 @@
 ﻿using System;
 using SadConsole;
+using SadConsole.Components;
 using Microsoft.Xna.Framework;
 using GoRogue;
 
@@ -14,7 +15,8 @@ namespace Timeless_Peach_Origin.src.constructs {
         public uint ID { get; private set; }
 
         public Construct(Color foreground, Color background, int glyph, string name) : base(foreground, background, glyph) {
-
+            Font = SadConsole.Global.FontDefault.Master.GetFont(Font.FontSizes.Two);
+            this.Components.Add(new EntityViewSyncComponent());
         }
 
         public int getHealth() {
