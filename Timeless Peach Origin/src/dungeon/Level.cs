@@ -21,7 +21,7 @@ namespace Timeless_Peach_Origin.src.dungeon {
 
         public GoRogue.MultiSpatialMap<Construct> entities;
         private LevelTypes levelType;
-        private Cell[] level;
+        private ArrayMap<Tile> level;
 
         public Level(LevelTypes levelType) : base(150, 75) {
             this.levelType = levelType;
@@ -36,7 +36,7 @@ namespace Timeless_Peach_Origin.src.dungeon {
             }
         }
 
-        public Cell[] GetLevel() {
+        public ArrayMap<Tile> GetLevel() {
             return level;
         }
 

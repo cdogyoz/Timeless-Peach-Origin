@@ -23,7 +23,7 @@ namespace Timeless_Peach_Origin.src.dungeon.chefs {
             cavern = new ArrayMap<Tile>(width, height);
         }
 
-        public Tile[] CreateLevel() {
+        public ArrayMap<Tile> CreateLevel() {
             Random r = new Random(seed);
 
             for (int x = 0; x < width; x++) {
@@ -112,9 +112,13 @@ namespace Timeless_Peach_Origin.src.dungeon.chefs {
                 cavern[width - 1, y] = new CaveWallTile();
             }
 
-            for(int i = 0; i < 15; i++) {
-                for(int j = 0; j < 8; j++) {
-                    cavern[20 + i, j + 20] = new ShallowWaterTile();
+            bool stairPlaced = false;
+            while(stairPlaced == false) {
+                int x = r.Next(0, width - 1);
+                int y = r.Next(1, height - 1);
+                if(cavern[x, y].IsSolid() != true) {
+                    cavern[x, y] = new DownstairTile();
+                    stairPlaced = true;
                 }
             }
 

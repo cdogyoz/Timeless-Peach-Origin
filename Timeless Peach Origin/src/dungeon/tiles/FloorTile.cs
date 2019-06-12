@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework;
 namespace Timeless_Peach_Origin.src.dungeon.tiles {
     class FloorTile : Tile {
 
-        public FloorTile() : base(Color.Gray, Color.Black, (int)'-', "ground"){
+        public FloorTile() : base(Color.Gray, Color.Black, (int)'-', "ground", false){
 
         }
     }

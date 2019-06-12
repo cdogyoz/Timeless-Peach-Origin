@@ -48,7 +48,27 @@ namespace Timeless_Peach_Origin.src.consoles {
             return curLevel;
         }
 
+        private void UpdateLevel() {
+            curLevel++;
+            Cell[] level = dungeon.dungeon[curLevel].GetLevel();
+            Clear();
+            SetSurface(level, dungeon.dungeon[curLevel].Width, dungeon.dungeon[curLevel].Height);
+            dungeon.dungeon[curLevel].Add(player);
+        }
+
         private void PlayerMovement() {
+            if (SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.Escape)) {
+                escConsole = new EscConsole(TimelessPeach.width, TimelessPeach.height, game);
+                Children.Add(escConsole);
+                SadConsole.Global.CurrentScreen = escConsole;
+            }
+
+            if (SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.D)) {
+                if (GetGlyph(player.Position.X, player.Position.Y) == '<') {
+                    UpdateLevel();
+                }
+            }
+
             if (SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.Escape)) {
                 escConsole = new EscConsole(TimelessPeach.width, TimelessPeach.height, game);
                 Children.Add(escConsole);
