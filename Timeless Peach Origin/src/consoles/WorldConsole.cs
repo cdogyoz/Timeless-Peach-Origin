@@ -14,7 +14,7 @@ namespace Timeless_Peach_Origin.src.consoles {
         private GameConsole game;
         Dungeon dungeon;
 
-        public WorldConsole(PlayableConstruct player, GameConsole game) : base(110, 32, new Rectangle(0,0, 100, 100)) {
+        public WorldConsole(PlayableConstruct player, GameConsole game) : base(110, 32, SadConsole.Global.FontDefault.Master.GetFont(Font.FontSizes.Two), new Rectangle(0,0, 100, 100)) {
             Position = new Point(0, 0);
             this.player = player;
             this.game = game;
@@ -48,12 +48,24 @@ namespace Timeless_Peach_Origin.src.consoles {
             return curLevel;
         }
 
-        private void UpdateLevel() {
-            curLevel++;
-            Cell[] level = dungeon.dungeon[curLevel].GetLevel();
-            Clear();
-            SetSurface(level, dungeon.dungeon[curLevel].Width, dungeon.dungeon[curLevel].Height);
-            dungeon.dungeon[curLevel].Add(player);
+        private void UpLevel() {
+            if(curLevel > 0) {
+                curLevel--;
+                Cell[] level = dungeon.dungeon[curLevel].GetLevel();
+                Clear();
+                SetSurface(level, dungeon.dungeon[curLevel].Width, dungeon.dungeon[curLevel].Height);
+                dungeon.dungeon[curLevel].Add(player);
+            }
+        }
+
+        private void DownLevel() {
+            if(curLevel < 4) {
+                curLevel++;
+                Cell[] level = dungeon.dungeon[curLevel].GetLevel();
+                Clear();
+                SetSurface(level, dungeon.dungeon[curLevel].Width, dungeon.dungeon[curLevel].Height);
+                dungeon.dungeon[curLevel].Add(player);
+            }
         }
 
         private void PlayerMovement() {
@@ -65,7 +77,10 @@ namespace Timeless_Peach_Origin.src.consoles {
 
             if (SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.D)) {
                 if (GetGlyph(player.Position.X, player.Position.Y) == '<') {
-                    UpdateLevel();
+                    DownLevel();
+                }
+                if (GetGlyph(player.Position.X, player.Position.Y) == '>') {
+                    UpLevel();
                 }
             }
 

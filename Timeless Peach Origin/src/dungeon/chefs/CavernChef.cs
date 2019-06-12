@@ -114,10 +114,13 @@ namespace Timeless_Peach_Origin.src.dungeon.chefs {
 
             bool stairPlaced = false;
             while(stairPlaced == false) {
-                int x = r.Next(0, width - 1);
-                int y = r.Next(1, height - 1);
-                if(cavern[x, y].IsSolid() != true) {
-                    cavern[x, y] = new DownstairTile();
+                int x1 = r.Next(0, width - 1);
+                int y1 = r.Next(1, height - 1);
+                int x2 = r.Next(1, width - 1);
+                int y2 = r.Next(1, height - 1);
+                if(cavern[x1, y1].IsSolid() != true && cavern[x2, y2].IsSolid() != true) {
+                    cavern[x1, y1] = new DownstairTile();
+                    cavern[x2, y2] = new UpstairTile();
                     stairPlaced = true;
                 }
             }

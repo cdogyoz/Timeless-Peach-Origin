@@ -119,12 +119,17 @@
     <Compile Include="src\dungeon\tiles\FloorTile.cs" />
     <Compile Include="src\dungeon\tiles\ShallowWaterTile.cs" />
     <Compile Include="src\dungeon\tiles\Tile.cs" />
+    <Compile Include="src\dungeon\tiles\UpstairTile.cs" />
     <Compile Include="src\TimelessPeach.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="fonts\Jdpage.font" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\Jdpage_8x8.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\build\MonoGame.Framework.WindowsDX.targets" Condition="Exists('..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\build\MonoGame.Framework.WindowsDX.targets')" />
