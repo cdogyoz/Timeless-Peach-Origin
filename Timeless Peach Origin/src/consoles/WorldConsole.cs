@@ -14,7 +14,7 @@ namespace Timeless_Peach_Origin.src.consoles {
         private GameConsole game;
         Dungeon dungeon;
 
-        public WorldConsole(PlayableConstruct player, GameConsole game) : base(110, 32, SadConsole.Global.FontDefault.Master.GetFont(Font.FontSizes.Two), new Rectangle(0,0,110, 16)) {
+        public WorldConsole(PlayableConstruct player, GameConsole game) : base(110, 32, SadConsole.Global.FontDefault.Master.GetFont(Font.FontSizes.Two), new Rectangle(0,0,55, 16)) {
             Position = new Point(0, 0);
             this.player = player;
             this.game = game;
