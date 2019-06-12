@@ -112,6 +112,12 @@ namespace Timeless_Peach_Origin.src.dungeon.chefs {
                 cavern[width - 1, y] = new CaveWallTile();
             }
 
+            for(int i = 0; i < 15; i++) {
+                for(int j = 0; j < 8; j++) {
+                    cavern[20 + i, j + 20] = new ShallowWaterTile();
+                }
+            }
+
             return cavern;
         }
     }

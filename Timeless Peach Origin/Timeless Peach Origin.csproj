@@ -107,6 +107,7 @@
     <Compile Include="src\constructs\HighUveseConstruct.cs" />
     <Compile Include="src\constructs\HumanConstruct.cs" />
     <Compile Include="src\constructs\KimiConstruct.cs" />
+    <Compile Include="src\constructs\monsters\MonsterConstruct.cs" />
     <Compile Include="src\constructs\PlayableConstruct.cs" />
     <Compile Include="src\dungeon\chefs\CavernChef.cs" />
     <Compile Include="src\dungeon\Dungeon.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="src\dungeon\LevelTypes.cs" />
     <Compile Include="src\dungeon\tiles\CaveWallTile.cs" />
     <Compile Include="src\dungeon\tiles\FloorTile.cs" />
+    <Compile Include="src\dungeon\tiles\ShallowWaterTile.cs" />
     <Compile Include="src\dungeon\tiles\Tile.cs" />
     <Compile Include="src\TimelessPeach.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
