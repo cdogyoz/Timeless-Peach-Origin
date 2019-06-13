@@ -16,8 +16,7 @@ namespace Timeless_Peach_Origin.src.consoles {
 
         public static List<Item> inventory = new List<Item>() {
             new Item(Color.Purple, Color.Black, '&', "Broadsword"){ },
-            new Item(Color.Purple, Color.Black, '&', "Shortsword"){ },
-            new Item(Color.Purple, Color.Black, '&', "Healing Potion"){ }
+            new Item(Color.Purple, Color.Black, '&', "Shortsword"){ }
         };
 
         public GameConsole(int width, int height) {

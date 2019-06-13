@@ -6,6 +6,11 @@ using Timeless_Peach_Origin.src.constructs;
 
 namespace Timeless_Peach_Origin.src.consoles {
     class WorldConsole : SadConsole.ScrollingConsole {
+
+        //Inventory testing
+        private static Item healingPotion = new Item(Color.Purple, Color.Yellow, '&', "Healing Potion");
+        //Inventory testing
+
         private int curLevel = 0;
         private PlayableConstruct player;
         private EscConsole escConsole;
@@ -22,6 +27,10 @@ namespace Timeless_Peach_Origin.src.consoles {
             Cell[] level = dungeon.dungeon[curLevel].GetLevel();
             SetSurface(level, dungeon.dungeon[curLevel].Width, dungeon.dungeon[curLevel].Height);
             dungeon.dungeon[curLevel].Add(player);
+
+            //Inventory testing
+            dungeon.dungeon[curLevel].Add(healingPotion);
+            //Inventory testing
         }
 
         public void CenterOnPlayer(){
@@ -32,7 +41,6 @@ namespace Timeless_Peach_Origin.src.consoles {
             SyncMapEntities();
             PlayerMovement();
             CenterOnPlayer();
-
             UpdatePlayerFOV();
             base.Update(timeElapsed);
         }
@@ -50,7 +58,6 @@ namespace Timeless_Peach_Origin.src.consoles {
                 }
             }
 
-            
             SetSurface(dungeon.dungeon[curLevel].GetLevel(), dungeon.dungeon[curLevel].Width, dungeon.dungeon[curLevel].Height);
         }
 
@@ -101,12 +108,11 @@ namespace Timeless_Peach_Origin.src.consoles {
                 if (GetGlyph(player.Position.X, player.Position.Y) == '>') {
                     UpLevel();
                 }
-            }
-
-            if (SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.Escape)) {
-                escConsole = new EscConsole(TimelessPeach.width, TimelessPeach.height, game);
-                Children.Add(escConsole);
-                SadConsole.Global.CurrentScreen = escConsole;
+                //Inventory testing
+                if(GetGlyph(player.Position.X, player.Position.Y) == '&') {
+                    GameConsole.inventory.Add(healingPotion);
+                }
+                //Inventory testing
             }
 
             if (SadConsole.Global.KeyboardState.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.Down)
