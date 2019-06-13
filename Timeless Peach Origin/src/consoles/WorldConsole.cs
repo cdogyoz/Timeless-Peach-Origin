@@ -32,7 +32,26 @@ namespace Timeless_Peach_Origin.src.consoles {
             SyncMapEntities();
             PlayerMovement();
             CenterOnPlayer();
+
+            UpdatePlayerFOV();
             base.Update(timeElapsed);
+        }
+
+        private void UpdatePlayerFOV() {
+            player.InitializeFOV(dungeon, curLevel);
+            for(int x = 0; x < dungeon.dungeon[curLevel].Width; x++) {
+                for(int y = 0; y < dungeon.dungeon[curLevel].Height; y++) {
+                    if(player.GetFOV().BooleanFOV[x, y] == true) {
+                        dungeon.dungeon[curLevel].GetLevel()[x, y].SetRevealed(true);
+                    }
+                    if(player.GetFOV().BooleanFOV[x, y] == false) {
+                        dungeon.dungeon[curLevel].GetLevel()[x, y].SetRevealed(false);
+                    }
+                }
+            }
+
+            
+            SetSurface(dungeon.dungeon[curLevel].GetLevel(), dungeon.dungeon[curLevel].Width, dungeon.dungeon[curLevel].Height);
         }
 
         private void SyncMapEntities() {
