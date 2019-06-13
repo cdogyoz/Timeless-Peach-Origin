@@ -10,6 +10,8 @@ namespace Timeless_Peach_Origin.src.dungeon {
         protected Color mainForeground, mainBackground;
         protected int mainGlyph;
 
+        protected bool revealedBefore = false;
+
         public Tile(Color foreground, Color background, int glyph, string name, bool solid) {
             Foreground = foreground;
             Background = background;
@@ -33,10 +35,15 @@ namespace Timeless_Peach_Origin.src.dungeon {
             if(revealed == true) {
                 Foreground = mainForeground;
                 Background = mainBackground;
+                revealedBefore = true;
             }
             if(revealed == false) {
                 Foreground = Color.Black;
                 Background = Color.Black;
+                if(revealedBefore == true) {
+                    Foreground = Color.Black;
+                    Background = Color.LightGray;
+                }
             }
         }
     }
