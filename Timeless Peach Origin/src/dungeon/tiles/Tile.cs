@@ -42,7 +42,7 @@ namespace Timeless_Peach_Origin.src.dungeon {
                 Background = Color.Black;
                 if(revealedBefore == true) {
                     Foreground = Color.Black;
-                    Background = Color.LightGray;
+                    Background = Color.DarkGray;
                 }
             }
         }
