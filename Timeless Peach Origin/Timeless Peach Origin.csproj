@@ -93,6 +93,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\commands\CommandManager.cs" />
     <Compile Include="src\consoles\CharacterConsole.cs" />
     <Compile Include="src\consoles\CharacterCreate.cs" />
     <Compile Include="src\consoles\EscConsole.cs" />
