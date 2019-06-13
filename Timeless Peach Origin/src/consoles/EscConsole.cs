@@ -14,7 +14,6 @@ namespace Timeless_Peach_Origin.src.consoles {
         private MainMenuConsole mainMenuConsole;
         private ConsoleManager conMan;
 
-        private GameState gameState = new GameState();
         public EscConsole(int width, int height, GameConsole game) : base(TimelessPeach.width, TimelessPeach.height) {
             this.game = game ;
         }
